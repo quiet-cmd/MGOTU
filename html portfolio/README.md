@@ -1,4 +1,5 @@
 Учебный проект одностраничный сайт портфолио
+
 http://test-portfolio.quiet-cmd.tk/
 
 ### Инструкция для установки на ubuntu 20.04
@@ -37,7 +38,7 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/your_domai
 ```bash
 sudo nano /etc/nginx/sites-available/your_domain
 ```
-
+```bash
 server {
         listen 80;
         listen [::]:80;
@@ -51,6 +52,7 @@ server {
             try_files $uri $uri/ =404;
         }
 }
+```
 
 ### активация виртуальных хостов и перезапуск Nginx
 
