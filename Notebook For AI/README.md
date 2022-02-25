@@ -1,5 +1,5 @@
 # Notebook_For_AI_Main
 Jupyter notebook for my main AI course
 
-Для запуска Binder нажмите:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quiet-cmd/MGOTU/tree/main/Notebook%20For%20AI/HEAD)
+Лекции - https://github.com/mosalov/AI_basics_lectures
+Данные для курсовых - https://github.com/mosalov/PreparedDataSets
