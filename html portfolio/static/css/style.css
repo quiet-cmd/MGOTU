@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    background-color: hsl(222, 58%, 16%);
+}
+a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #dad4d4ee;
+    text-decoration: none;
+    background-repeat: no-repeat;
+}
+h2 {
+    margin: 0 0 0;
+    padding-top: 10px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+._container {
+    max-width: 1046px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+/*---HEADER----------------------------------------------------------------------------*/
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.header__container {
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+.menu {
+    padding: 5px 0px;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu__item {
+    margin: 0px 30px 0px 0px;
+}
+.menu__link {
+    padding-left: 30px;
+}
+.github-ico {
+    background-image: url("../img/ico-github.svg");
+}
+.email-ico {
+    background-image: url("../img/ico-mail.svg");
+}
+.phone-ico {
+    background-image: url("../img/ico-phone.svg");
+}
+/*---MAIN-BLOCK----------------------------------------------------------------------------*/
+.main-block {
+    background-image: linear-gradient(to bottom, hsla(222, 58%, 16%, 0.616), hsl(222, 58%, 16%)), url("../img/main_block_cover.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+}
+.main-block__container {
+    padding: 150px 0px 100px 34px;
+    
+}
+.main-block__title { 
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100px;
+    margin: 0 0 40px;
+    letter-spacing: -2px;
+}
+.main-block__text {
+    font-size: 32px;
+    line-height: 115%;
+}
+/*---ABOUT-BLOCK----------------------------------------------------------------------------*/
+.about-block__container {
+    padding: 150px 0px 100px 34px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+.about-block__photo {
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px 0px rgba(46, 43, 99, 0.534);
+}
+.about-block__content {
+    width: 600px;
+}
+@media screen and (max-width: 1028px) {
+    .about-block__photo { 
+        width: 90%;
+        height: 90%
+    }
+    .about-block__content {
+        width: 900px;
+    }
+}
+/*---QUALIFICATION-BLOCK----------------------------------------------------------------------------*/
+.qualification-block {
+    background-image:
+    linear-gradient(to top, hsla(222, 58%, 16%, 0.220), hsl(222, 58%, 16%)),
+    linear-gradient(to bottom, hsla(222, 58%, 16%, 0.220), hsl(222, 58%, 16%)), url("../img/qualification_block_cover.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+}
+.qualification-block__container {
+    padding: 100px 0px 100px 34px;
+}
+/*---SKILLS-BLOCK----------------------------------------------------------------------------*/
+.skills-block__container {
+    padding: 100px 0px 150px 0px;
+}
+.skills-block__skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-list__skill {
+    flex-direction: row;
+    justify-content:space-between;
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+@media screen and (max-width: 930px) {
+    .skills-list__skill { 
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
+.skills-block__title {
+    text-align: center;
+}
+.skill__skill-title {
+    margin: 0 0 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.skill-block__title-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+/*---FOOTER----------------------------------------------------------------------------*/
+.footer__container {
+    padding: 50px 0px 5px 0px;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+.footer__footer-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-list__item {
+    margin: 0px 30px 0px 0px;
+}
