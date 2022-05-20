@@ -1,0 +1,19 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page__all-articles all-articles">
+    <div class="all-articles__container _container">
+        {% for item in ArticleBD %}
+        <div class="all-articles__article">
+            <div class="article-content">
+                <h2 class="article__title"> {{ item.title }} </h2>
+                {{ item.text|safe|linebreaks|truncatewords:50 }}
+            </div>
+            <a class="article__read-full" href="{% url 'article' item.pk %}">Читать полностью</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

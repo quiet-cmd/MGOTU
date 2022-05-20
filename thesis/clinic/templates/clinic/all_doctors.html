@@ -1,0 +1,23 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page__doctors-block doctors-block">
+    <div class="doctors-block__container _container">
+        <h2 class="doctors-block__title">
+            Наши доктора
+        </h2>
+        <div class="doctors-block__doctors-list _identical-rows">
+            {% for item in DoctorsBD%}
+            <div class="doctors-list__item _rows-item">
+                <a href="{% url 'doctor' item.pk %}">
+                <h3 class="doctor__title">{{  item.name }}</h3>
+                <img class="doctor__img" src="{{ item.photo.url }}" alt="Фото доктора">
+                </a>>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

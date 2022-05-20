@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{% static 'clinic/css/style.css' %}" rel="stylesheet">
+    <title>Клиника профессора Столяренко</title>
+    <base target="_blank">
+</head>
+<body>
+    <div class="wrapper">
+                <header class="header">
+            <div class="header__container _container">
+                <div class="header__logo">
+                    <img class="logo__icon" src="" alt="clinic-logo">
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="{% url 'services' %}" class="menu__link">Услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="{% url 'doctors' %}" class="menu__link">Врачи</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="{% url 'articles' %}" class="menu__link">Статьи</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="{% url 'documents' %}" class="menu__link">Сертификаты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+{% block content %}
+
+{% endblock content %}
+
+        <footer>
+            <div class="footer__container _container">
+                Футер-то у нас приемный.<br>
+                В футере размещают сведения об авторстве. <br>
+                Информация о партнерах. <br>
+                Дублирование контактов. Социальные сети. <br>
+                Обратная связь и другие лид-формы. Политика конфиденциальности и защита персональных данных.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

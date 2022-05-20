@@ -1,0 +1,121 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <section class="page__about-block about-block">
+            <div class="about-block__container _container">
+                <h1 class="about-block__title">
+                    Клиника профессора столяренко -<br>Офтальмологическая клиника в Москве
+                </h1>
+                <div class="about-block__text">
+                    <p>Клиника профессора Столяренко осуществляет свою деятельность с 1998 года.</p>
+                    <p>При этом мы на постоянной основе лечим наиболее сложные заболевания глаз.</p>
+                    <p>В ряде особо сложных случаев в Клинике заведено коллегиальное принятие решения</p>
+                    <p>практикуются рекомендации получения «второго мнения» у ведущих специалистов.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__services-block services-block">
+            <div class="services-block__container _container">
+                <h2 class="services-block__title">
+                    Услуги
+                </h2>
+                <div class="services-block__services-list _identical-rows">
+                    {% for item in CategoryServicesBD %}
+
+                    <div class="services-list__item _rows-item">
+                        <h3 class="item__title">{{ item.name }}</h3>
+                        <div class="item__text">
+                            <p>Описание</p>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                <a class="page" href="{% url 'services' %}">
+                    <div class="services-block__all-services _btn">
+                        <p class="all-services__title">+ Показать все услуги</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="page__doctors-block doctors-block">
+            <div class="doctors-block__container _container">
+                <h2 class="doctors-block__title">
+                    Наши доктора
+                </h2>
+                <div class="doctors-block__doctors-list _identical-rows">
+                    {% for item in DoctorsBD %}
+
+                    <div class="doctors-list__item _rows-item">
+                        <img class="doctor__img" src="{{ item.photo.url }}" alt="Фото доктора">
+                        <h3 class="doctor__title">{{  item.name }}</h3>
+                        <div class="doctor__text">
+                            <p>{{  item.specialization }}</p>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                <a class="page" href="{% url 'doctors' %}">
+                    <div class="doctors-block__all-doctors _btn">
+                        <p class="all-services__title">Все доктора →</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="page__certificates-block certificates-block">
+            <div class="certificates-block__container _container">
+                <h2 class="certificates-block__title">
+                    Сертификаты
+                </h2>
+                <div class="certificates-block__sertificate-list _identical-rows">
+                    {% for item in ClinicDocumentsBD %}
+
+                    <img class="sertificate-list__item _rows-item" src="{{ item.photo.url }}" alt="Сертификат">
+
+                    {% endfor %}
+                </div>
+                <a class="page" href="{% url 'documents' %}">
+                    <div class="certificates-block__all-certificates _btn">
+                        <p class="all-certificates__title"> Все сертификаты →</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="page__entry-block entry-block">
+            <div class="entry-block__container _container">
+                <h2 class="entry-block__title">
+                    Запишитесь на прием
+                </h2>
+                <div class="entry-block__content">
+                    <div class="entry-block__contacts">
+                        <h3 class="contacts__title">
+                            Телефон
+                        </h3>
+                        <p class="contacts__phone">8 (916) 759-3950</p>
+                        <p class="contacts__phone">8 (926) 206-7298</p>
+                        <h3 class="contacts__title">
+                            Почта
+                        </h3>
+                        <p class="contacts__email"> retina@retina.ru</p>
+                        <h3 class="contacts__title">
+                            Рабочее время
+                        </h3>
+                        <p class="contacts__days">Пн-Чт 9:00-18:00</p>
+                        <p class="contacts__days">Пт 9:00-17:00</p>
+                    </div>
+                    <div class="entry-block__address">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/tsentr_diagnostiki_i_khirurgii_zadnego_otdela_glaza_klinika_professora_stolyarenko/1038657487/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Центр диагностики и хирургии заднего отдела глаза Клиника профессора Столяренко</a><a href="https://yandex.ru/maps/213/moscow/category/medical_center_clinic/184106108/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Медцентр, клиника в Москве</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5BDwcSA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        <p class="address__text">Москва, ул. 2-я Владимирская, дом 2, 4-й этаж</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

@@ -1,0 +1,272 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*расположение блоков*/
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Отступы для всего контента*/
+._container {
+    max-width: 1046px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+
+
+/*нормальные ряды*/
+._identical-rows {
+    display: flex;
+    flex-flow: wrap;
+    align-content: space-between;
+}
+._rows-item {
+    box-sizing:border-box;
+    flex:1 1 calc(33.33% - 30px);
+}
+
+._btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+body,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    font-family: 'Courier Prime';
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+}
+/*HEADER------------------------------*/
+.header__container {
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+}
+.logo__icon {
+    margin: 0px 90px 0px 0px;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.menu__item {
+    margin: 0px 40px 0px 0px;
+}
+
+/*ABOUT-BLOCK--------------------------*/
+.about-block__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 70px 0px;
+}
+.about-block__title {
+    margin: 86px 0px 40px 0px;
+}
+/*SERVICES-BLOCK----------------------*/
+.services-block__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 70px 0px;
+}
+.services-block__title {
+    margin: 70px 0px 30px 0px;
+}
+
+.services-list__item {
+    min-height: 188px;
+    min-width: 340px;
+    background: blueviolet;
+    margin: 3px 6px 3px 0px;
+}
+.services-block__all-services {
+    background-color: blueviolet;
+    min-height: 100px;
+    margin: 3px 6px 3px 0px;
+}
+
+.item__title {
+    margin: 40px 0px 0px 20px;
+}
+.item__text {
+    margin: 20px 0px 0px 20px;
+}
+
+/*DOCTORS-BLOCK------------*/
+.doctors-block__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 70px 0px;
+}
+.doctors-block__title {
+    margin: 70px 0px 30px 0px;
+}
+.doctor__img {
+    min-width: 200px;
+    min-height: 314px;
+    max-width: 300px;
+    max-height: 314px;
+    background-color: blueviolet;
+}
+.doctors-list__item {
+    margin: 10px 30px 0px 0px;
+}
+.doctor__title {
+    margin: 30px 0px 0px 0px;
+}
+.doctor__text {
+    margin: 20px 0px 0px 0px;
+}
+.doctors-block__all-doctors {
+    background-color: blueviolet;
+    height: 60px;
+    width: 220px;
+    margin: 30px 0px 0px 0px;
+}
+/*CERTIFICATE-BLOCK------------*/
+.certificates-block__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 70px 0px;
+}
+.certificates-block__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 40px 0px;
+}
+.sertificate-list__item {
+    min-width: 280px;
+    min-height: 380px;
+    max-width: 318px;
+    background-color: blueviolet;
+    margin: 10px 30px 0px 0px;
+}
+.certificates-block__all-certificates {
+    width: 220px;
+    height: 60px;
+    background-color: blueviolet;
+    margin: 30px 0px 0px 0px;
+}
+/*ENTRY-BLOCK--------------*/
+.entry-block__container {
+    padding: 0px 0px 70px 0px;
+}
+.entry-block__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.entry-block__title {
+    margin: 0px 0px 30px 0px;
+}
+.address__text,
+.contacts__phone,
+.contacts__title,
+.contacts__email,
+.contacts__days {
+    margin: 0px 0px 26px 0px;
+}
+.entry-block__contacts {
+    margin: 0px 130px 0px 0px; 
+}

@@ -1,0 +1,12 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page__article article">
+    <div class="article__container _container">
+        <h2 class="article__title"> {{ ArticleBD.title }}</h2>
+        {{ ArticleBD.text|safe}}
+    </div>
+</section>
+
+{% endblock content %}

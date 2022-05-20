@@ -1,0 +1,21 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page__doctor-block doctor-block">
+    <div class="doctor-block__container _container">
+        <h2 class="doctor-block__title">
+            {{DoctorsBD.name}}
+        </h2>
+        <img class="doctor__img" src="{{ DoctorsBD.photo.url }}" alt="Фото доктора">
+        <p class="doctors-specialization">
+            {{DoctorsBD.specialization|safe}}
+        </p>
+        <div class="doctors-exp">
+            {{DoctorsBD.experience|safe}}
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page__all-documents all-documents">
+    <div class="all-documents__container _container">
+        <table>
+            {% for cat in CategoryServicesBD %}
+            <tr>
+                <th>{{ cat.name }}</th>
+            </tr>
+                {% for item in ServicesBD %}
+                    {% if item.cat.name == cat.name %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.code }}</td>
+                        <td>{{ item.price }}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </table>
+    </div>
+</section>
+
+{% endblock content %}

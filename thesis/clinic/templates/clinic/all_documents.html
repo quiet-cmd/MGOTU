@@ -1,0 +1,28 @@
+{% extends 'clinic/base.html' %}
+{% load static %}
+
+{% block content %}
+{% for cat in CategoryClinicDocumentsBD %}
+
+       <section class="page__certificates-block certificates-block">
+            <div class="certificates-block__container _container">
+                <h2 class="certificates-block__title">
+                    {{ cat.name }}
+                </h2>
+                <div class="certificates-block__sertificate-list _identical-rows">
+                    {% for item in ClinicDocumentsBD %}
+                        {% if item.cat.name == cat.name %}
+                    <div class="sertificate-list__item _rows-item">
+                        <p class="item__title">{{ item.name }}</p>
+                        <img class="item__img" src="{{ item.photo.url }}" alt="Сертификат">
+                    </div>
+
+
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+{% endfor %}
+
+{% endblock content %}
